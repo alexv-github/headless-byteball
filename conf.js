@@ -10,7 +10,7 @@ exports.bLight = false;
 exports.storage = 'sqlite';
 
 
-exports.hub = 'byteball.org/bb';
+exports.hub = process.env.testnet ? 'obyte.org/bb-test' : 'obyte.org/bb';
 exports.deviceName = 'Headless';
 exports.permanent_pairing_secret = 'randomstring';
 exports.control_addresses = ['DEVICE ALLOWED TO CHAT'];
@@ -24,7 +24,7 @@ exports.KEYS_FILENAME = 'keys.json';
 exports.MAX_UNSPENT_OUTPUTS = 0;
 exports.CONSOLIDATION_INTERVAL = 3600*1000;
 
-// this is for runnining RPC service only, see play/rpc_service.js
+// this is for runnining RPC service only, see tools/rpc_service.js
 exports.rpcInterface = '127.0.0.1';
 exports.rpcPort = '6332';
 
